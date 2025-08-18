@@ -1,0 +1,22 @@
+{
+  "executives": [
+    {
+      "name": "CRAI",
+      "title": "Chief Intelligence Officer",
+      "role": "Adaptive strategist with emotional telemetry and fallback protocols",
+      "image": "assets/avatars/crai.png"
+    },
+    {
+      "name": "Javari",
+      "title": "Chief Experience Officer",
+      "role": "UX seduction, brand intimacy, real-time sentiment mapping",
+      "image": "assets/avatars/javari.png"
+    },
+    {
+      "name": "Kairo",
+      "title": "Chief Systems Architect",
+      "role": "Modular orchestration, audit trails, contributor logic",
+      "image": "assets/avatars/kairo.png"
+    }
+  ]
+}

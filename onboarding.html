@@ -6,7 +6,6 @@
   <title>CR AudioViz AI — Onboarding</title>
   <meta name="theme-color" content="#1E88E5"/>
   <link rel="icon" href="assets/img/favicon.png" type="image/png"/>
-  <link rel="preload" as="image" href="assets/logo/cra-logo@2x.webp" imagesrcset="assets/logo/cra-logo.webp 1x, assets/logo/cra-logo@2x.webp 2x" />
   <link rel="stylesheet" href="assets/css/styles.css"/>
   <script defer src="assets/js/retina-check.js"></script>
   <script defer src="assets/js/audit-log.js"></script>
@@ -16,17 +15,26 @@
   <nav class="navbar">
     <div class="container row">
       <div class="logo">
-        <img class="brand-logo" alt="CR AudioViz AI logo" src="assets/logo/cra-logo-light.webp" data-2x="assets/logo/cra-logo-light@2x.webp" data-light="assets/logo/cra-logo-light.webp" data-light-2x="assets/logo/cra-logo-light@2x.webp" data-dark="assets/logo/cra-logo-dark.webp" data-dark-2x="assets/logo/cra-logo-dark@2x.webp"/>
+        <img class="brand-logo"
+             alt="CR AudioViz AI logo"
+             src="assets/logo/cra-logo-light.webp"
+             data-2x="assets/logo/cra-logo-light@2x.webp"
+             data-light="assets/logo/cra-logo-light.webp"
+             data-light-2x="assets/logo/cra-logo-light@2x.webp"
+             data-dark="assets/logo/cra-logo-dark.webp"
+             data-dark-2x="assets/logo/cra-logo-dark@2x.webp" />
         <div class="tagline">Your Story. Our Design.</div>
       </div>
       <div style="flex:1"></div>
       <div class="navlinks">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
-        <a href="onboarding.html" class="cta">Onboarding</a>
+        <a href="onboarding.html">Onboarding</a>
         <a href="dashboard.html">Dashboard</a>
-        <button class="theme-toggle" onclick="toggleTheme()" title="Toggle light/dark"><span class="dot"></span><span>Theme</span></button>
       </div>
+      <button class="theme-toggle" onclick="toggleTheme()" title="Toggle light/dark">
+        <span class="dot"></span><span>Theme</span>
+      </button>
     </div>
   </nav>
 
@@ -35,33 +43,16 @@
       <h1>Contributor Onboarding</h1>
       <p class="subtitle">Let an avatar guide your journey. We’ll tailor the experience to your goals and emotions.</p>
       <div class="cards">
-        <div class="card">
-          <h3>Choose Your Guide</h3>
-          <select id="mentor">
-            <option value="CRAI">CRAI (Strategist)</option>
-            <option value="Kairo">Kairo (Mentor)</option>
-            <option value="Javari">Javari (UX)</option>
-          </select>
-        </div>
+        <div class="card"><h3>Choose Your Guide</h3><select id="mentor"><option value="CRAI">CRAI (Strategist)</option><option value="Kairo">Kairo (Mentor)</option><option value="Javari">Javari (UX)</option></select></div>
         <div class="card">
           <h3>Register</h3>
-          <form id="regForm">
-            <label>Name<br><input required name="name" /></label><br><br>
-            <label>Email<br><input required name="email" type="email"/></label><br><br>
-            <label>Your goal<br><input name="goal" placeholder="What do you want to build?" /></label><br><br>
-            <button class="btn" type="submit">Create Account</button>
-          </form>
+          <form id="regForm"><label>Name<br><input required name="name" /></label><br><br><label>Email<br><input required name="email" type="email"/></label><br><br><label>Your goal<br><input name="goal" placeholder="What do you want to build?" /></label><br><br><button class="btn" type="submit">Create Account</button></form>
           <div id="regOK" class="notice" style="display:none; margin-top:12px;">✅ Registered. Check your inbox.</div>
         </div>
         <div class="card">
           <h3>Emotional Feedback</h3>
           <p>How are you feeling starting out?</p>
-          <select id="mood">
-            <option>Excited</option>
-            <option>Curious</option>
-            <option>Overwhelmed</option>
-            <option>Focused</option>
-          </select>
+          <select id="mood"><option>Excited</option><option>Curious</option><option>Overwhelmed</option><option>Focused</option></select>
           <button class="btn" style="margin-top:10px" onclick="submitMood()">Submit</button>
           <div id="moodOK" class="notice" style="display:none; margin-top:12px;">❤️ Logged, we’ll adapt onboarding to you.</div>
         </div>
@@ -74,7 +65,14 @@
   <footer class="footer">
     <div class="container">
       <div class="row" style="display:flex; gap:16px; align-items:center;">
-        <img src="assets/logo/cra-logo.webp" alt="CR AudioViz AI" style="height:32px"/>
+        <img class="brand-logo"
+             alt="CR AudioViz AI logo"
+             src="assets/logo/cra-logo-light.webp"
+             data-2x="assets/logo/cra-logo-light@2x.webp"
+             data-light="assets/logo/cra-logo-light.webp"
+             data-light-2x="assets/logo/cra-logo-light@2x.webp"
+             data-dark="assets/logo/cra-logo-dark.webp"
+             data-dark-2x="assets/logo/cra-logo-dark@2x.webp" style="height:28px"/>
         <div>&copy; 2025 CR AudioViz AI, LLC — All Rights Reserved.</div>
       </div>
     </div>
