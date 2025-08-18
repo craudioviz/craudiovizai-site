@@ -1,0 +1,78 @@
+<!doctype html>
+<html data-theme="dark" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>CR AudioViz AI — Dashboard</title>
+  <meta name="theme-color" content="#1E88E5"/>
+  <link rel="icon" href="assets/img/favicon.png" type="image/png"/>
+  <link rel="preload" as="image" href="assets/logo/cra-logo@2x.webp" imagesrcset="assets/logo/cra-logo.webp 1x, assets/logo/cra-logo@2x.webp 2x" />
+  <link rel="stylesheet" href="assets/css/styles.css"/>
+  <script defer src="assets/js/retina-check.js"></script>
+  <script defer src="assets/js/audit-log.js"></script>
+  <script defer src="assets/js/theme.js"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container row">
+      <div class="logo">
+        <img class="brand-logo" alt="CR AudioViz AI logo" src="assets/logo/cra-logo-light.webp" data-2x="assets/logo/cra-logo-light@2x.webp" data-light="assets/logo/cra-logo-light.webp" data-light-2x="assets/logo/cra-logo-light@2x.webp" data-dark="assets/logo/cra-logo-dark.webp" data-dark-2x="assets/logo/cra-logo-dark@2x.webp"/>
+        <div class="tagline">Your Story. Our Design.</div>
+      </div>
+      <div style="flex:1"></div>
+      <div class="navlinks">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="onboarding.html">Onboarding</a>
+        <a href="dashboard.html" class="cta">Dashboard</a>
+        <button class="theme-toggle" onclick="toggleTheme()" title="Toggle light/dark"><span class="dot"></span><span>Theme</span></button>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section">
+    <div class="container">
+      <h1>Operations Dashboard</h1>
+      <div class="cards">
+        <div class="card">
+          <h3>Live Contributor Metrics</h3>
+          <table class="table" id="contributors">
+            <thead><tr><th>Name</th><th>Mood</th><th>Score</th><th>Joined</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <div class="card">
+          <h3>Avatar Sentiment</h3>
+          <p>CRAI alignment: <progress id="sentCRAI" value="60" max="100"></progress></p>
+          <p>Kairo alignment: <progress id="sentKairo" value="72" max="100"></progress></p>
+          <p>Javari alignment: <progress id="sentJavari" value="48" max="100"></progress></p>
+        </div>
+        <div class="card">
+          <h3>API Integration Status</h3>
+          <ul id="apiStatus">
+            <li>Auth: <b class="ok">OK</b></li>
+            <li>Payments: <b class="warn">Pending</b></li>
+            <li>Storage: <b class="ok">OK</b></li>
+            <li>Email: <b class="warn">Pending</b></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Audit Trail</h3>
+          <div id="auditLog" style="max-height:240px; overflow:auto;"></div>
+          <button class="btn" onclick="clearAudit()">Clear</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script defer src="assets/js/dashboard.js"></script>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row" style="display:flex; gap:16px; align-items:center;">
+        <img src="assets/logo/cra-logo.webp" alt="CR AudioViz AI" style="height:32px"/>
+        <div>&copy; 2025 CR AudioViz AI, LLC — All Rights Reserved.</div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
