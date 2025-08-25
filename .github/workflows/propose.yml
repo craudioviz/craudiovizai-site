@@ -7,6 +7,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       WEB_DIR: .
+      CRAI_API_KEY: ${{ secrets.CRAI_API_KEY }}
+      CRAI_MODEL: ${{ secrets.CRAI_MODEL }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
