@@ -2,7 +2,7 @@
 on:
   push:
     branches: [ main ]
-    paths: [ "./**" ]
+    paths: [ "**" ]
   workflow_dispatch: {}
 jobs:
   ftp-deploy:
@@ -17,3 +17,4 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           server-dir: ${{ secrets.FTP_DIR }}
           local-dir: .
+
