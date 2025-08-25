@@ -1,0 +1,24 @@
+﻿name: propose
+on:
+  schedule: [{ cron: "7 10 * * *" }]
+  workflow_dispatch: {}
+jobs:
+  propose:
+    runs-on: ubuntu-latest
+    env:
+      WEB_DIR: .
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - run: npm ci || npm i
+      - name: Propose edits
+        run: node tools/propose.mjs
+      - name: Create PR if changed
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "CRAI: propose site improvements"
+          title: "CRAI: site improvements"
+          body: "Automated improvements by CRAI."
+          branch: "crai/proposal-${{ github.run_id }}"
+          labels: crai, automation

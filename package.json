@@ -1,0 +1,12 @@
+﻿{
+  "name": "crai-autonomy-tools",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "audit": "node tools/audit.mjs",
+    "propose": "node tools/propose.mjs"
+  },
+  "dependencies": {
+    "js-yaml": "^4.1.0"
+  }
+}

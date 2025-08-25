@@ -1,0 +1,20 @@
+﻿name: audit
+on:
+  schedule: [{ cron: "22 9 * * *" }]
+  workflow_dispatch: {}
+jobs:
+  lhci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - run: npm ci || npm i
+      - run: npm run audit
+      - uses: actions/upload-artifact@v4
+        with: { name: lighthouse-reports, path: .reports }
+      - uses: peter-evans/create-issue-from-file@v5
+        with:
+          title: "CRAI: Daily Web Audit"
+          content-filepath: .reports/summary.md
+          labels: audit, crai
