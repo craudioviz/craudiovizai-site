@@ -28,5 +28,4 @@ jobs:
           branch: "crai/proposal-${{ github.run_id }}"
           add-paths: |
             index.html
-            # assets/**
-          # labels: crai, automation  # enable only if labels exist
+          # labels: crai, automation  # (keep this commented OUT)
