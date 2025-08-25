@@ -26,4 +26,7 @@ jobs:
           title: "CRAI: site improvements"
           body: "Automated improvements by CRAI."
           branch: "crai/proposal-${{ github.run_id }}"
-          labels: crai, automation
+          add-paths: |
+            index.html
+            # assets/**
+          # labels: crai, automation  # enable only if labels exist
